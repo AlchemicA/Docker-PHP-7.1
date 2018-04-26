@@ -65,7 +65,7 @@ RUN set -ex \
 		&& chmod +x phpunit.phar \
 		&& mv phpunit.phar /usr/local/bin/phpunit \
 		&& php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
-		&& php composer-setup.php --install-dir=usr/bin --install-dir=bin \
+		&& php composer-setup.php --install-dir=usr/local/bin --install-dir=bin \
 		&& php -r "unlink('composer-setup.php');" \
 		# && curl -sSL https://files.magerun.net/n98-magerun.phar -o n98-magerun.phar \
 		# && chmod +x n98-magerun.phar \

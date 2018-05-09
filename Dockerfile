@@ -7,6 +7,9 @@ RUN set -ex \
 		docker-php-ext-install pdo_mysql \
 	) \
 	&& ( \
+		docker-php-ext-install bcmath \
+	) \
+	&& ( \
 		apk add \
 			--update \
 			--no-cache \

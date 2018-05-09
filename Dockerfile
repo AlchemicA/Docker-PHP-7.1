@@ -98,11 +98,11 @@ RUN set -ex \
 		&& echo "xdebug.remote_handler=dbgp" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
 		&& echo "xdebug.remote_connect_back=0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
 	) \
-	&& ( \
-		apk add \
-			--no-cache \ 
-			ssmtp \
-	) \
+	# && ( \
+	# 	apk add \
+	# 		--no-cache \ 
+	# 		ssmtp \
+	# ) \
 	&& ( \
 		addgroup \
 			-g 101 \
@@ -114,6 +114,6 @@ RUN set -ex \
 			-G nginx nginx \
 	)
 
-ENV SSMTP_HOST "mail:1025"
+# ENV SSMTP_HOST "mail:1025"
 
 ENTRYPOINT ["/usr/local/bin/docker-environment"]
